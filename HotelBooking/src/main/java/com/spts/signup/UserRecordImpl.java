@@ -16,6 +16,11 @@ import org.springframework.stereotype.Component;
 
 import com.spts.interfaces.IUserRecord;
 
+
+/**
+ *  @author Teja Ganapati Jaddipal - 015957526
+ */
+
 @Component
 public class UserRecordImpl implements IUserRecord{
 

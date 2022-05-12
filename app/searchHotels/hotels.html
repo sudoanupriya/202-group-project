@@ -28,53 +28,61 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="../StaticResources/logo.png" alt="" width="50" height="50" />
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a
-              >
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+          <img id="MDB-logo" src="../image/title.png" alt="MDB Logo" draggable="false" style="width: 700px;
+          height: 50px;">
+    </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#"><i class="fas fa-house-damage pe-2"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="./profile/user_profile.html"><i class="fas fa-heart pe-2"></i>Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="#contact"><i class="fas fa-phone pe-2"></i>Contact</a>
+          </li>
+          <li class="nav-item ms-3">
+            <button id="signInBtn" type="button" onclick="location.href = '../index.html'" href="../index.html" class="btn btn-dark">Log out</button>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
       <div class="wrapper wrapper--w680">
-        <div class="card card-4">
-          <div class="card-body">
-            <h2 class="title">Search Destinations </h2>
-            <form method="POST" name="searchForm" id="searchForm">
-              <div class="row row-space">
-                <div class="col-2">
-                  <div class="input-group">
-                    <label class="label"></label>
-                    <input
-                      class="input--style-4"
-                      type="text"
-                      name="search_info"
-                      id="search_info"
-                      placeholder="Country, City, Hotel..."
-                    />
-                  </div>
-              </div>
+        <div class="jumbotron">
+          <h1 class="display-4">Search Destinations!</h1>
+          <p class="lead">Browse through thousands of best hotels around the world.</p>
+          <hr class="my-4">
+          
+          <form method="POST" name="searchForm" id="searchForm">
+            <div class="row row-space">
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label"></label>
+                  <input
+                    class="input--style-4"
+                    type="text"
+                    name="search_info"
+                    id="search_info"
+                    placeholder="Country, City, Hotel..."
+                  />
+                </div>
+            </div>
 
-              <div class="p-t-15">
-                <button class="btn btn--radius-2 btn--blue" type="submit">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+            <div class="p-t-15">
+              <button class="btn btn--radius-2 btn--blue" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
+        
+        
       </div>
     </div>
 

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.spts.signup.User;
 
+/**
+ *  @author Teja Ganapati Jaddipal - 015957526
+ */
 
 public interface IUserRecord {
 	

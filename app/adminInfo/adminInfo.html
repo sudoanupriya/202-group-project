@@ -39,46 +39,42 @@
     <title>Admin Page</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">Navbar</a>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <!-- <div class="nav-item form-inline">
-            <button
-              class="btn btn-info"
-              href="./bookingHistory/bookingHistory.html"
-              tabindex="-1"
-            >
-              View Booking History
-            </button>
-          </div> -->
-        </ul>
-        <div class="form-inline my-2 my-lg-0">
-          <button class="btn btn-info" href="../index.html" tabindex="-1">
-            Logout
-          </button>
+  <body style="background-color: cornsilk;">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            id="MDB-logo"
+            src="../image/title.png"
+            alt="MDB Logo"
+            draggable="false"
+            style="width: 700px; height: 50px"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#"
+                ><i class="fas fa-house-damage pe-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item ms-3">
+              <a
+                id="signInBtn"
+                type="button"
+                onclick="location.href = '#'"
+                href="../index.html"
+                class="btn btn-dark"
+                style="background-color: #f44336;"
+              >
+                Log out
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-
+  
     <div class="container">
       <div
         class="row"

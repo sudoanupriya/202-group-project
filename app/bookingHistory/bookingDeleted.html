@@ -1,23 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./hotelBooking.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/bookingHistoryRedirector.js"></script>
 
-
     <title>Booking History</title>
-</head>
+  </head>
 
-<body>
-  
-    <p> Your booking was deleted</p>
-    <input type="button" onClick="getBooking()" value="Go Back" class="btn btn-info"/> 
-    
+  <body style="background-color: cornsilk">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            id="MDB-logo"
+            src="../image/title.png"
+            alt="MDB Logo"
+            draggable="false"
+            style="width: 700px; height: 50px"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#"
+                ><i class="fas fa-house-damage pe-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <div class="nav-item form-inline">
+                <input
+                  type="button"
+                  onClick="getBooking()"
+                  value="View Booking History"
+                  class="btn btn-info"
+                  style="margin-right: 10px"
+                />
+              </div>
+            </li>
+            <li class="nav-item ms-3">
+              <button
+                id="signInBtn"
+                type="button"
+                onclick="location.href = '../index.html'"
+                href="../index.html"
+                class="btn btn-dark"
+              >
+                Log out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+      <div class="wrapper wrapper--w680">
+        <div class="jumbotron">
+          <p class="lead">Your booking was deleted</p>
+          <hr class="my-4" />
+
+          <div class="p-t-15">
+            <button
+              class="btn btn--radius-2 btn--blue"
+              type="button"
+              onClick="getBooking()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <p>Your booking was deleted</p>
+    <input
+      type="button"
+      onClick="getBooking()"
+      value="Go Back"
+      class="btn btn-info"
+    /> -->
   </body>
 </html>

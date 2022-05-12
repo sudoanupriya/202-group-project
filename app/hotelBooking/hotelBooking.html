@@ -1,40 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./hotelBooking.css" />
     <title>Make a Booking</title>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/bookingHistoryRedirector.js"></script>
-</head>
+  </head>
 
-<body>
+  <body style="background-color: cornsilk">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            id="MDB-logo"
+            src="../image/title.png"
+            alt="MDB Logo"
+            draggable="false"
+            style="width: 700px; height: 50px"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="#"
+                ><i class="fas fa-house-damage pe-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <div class="nav-item form-inline">
+                <input
+                  type="button"
+                  onClick="getBooking()"
+                  value="View Booking History"
+                  class="btn btn-info"
+                  style="margin-right: 10px"
+                />
+              </div>
+            </li>
+            <li class="nav-item ms-3">
+              <button id="signInBtn" type="button" onclick="location.href = '../index.html'" href="../index.html" class="btn btn-dark">Log out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
- 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Navbar</a>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
             >
           </li>
           <div class="nav-item form-inline">
-            <input type="button" onClick="getBooking()" value="View Booking History" class="btn btn-info"/> 
+            <input
+              type="button"
+              onClick="getBooking()"
+              value="View Booking History"
+              class="btn btn-info"
+            />
           </div>
         </ul>
         <div class="form-inline my-2 my-lg-0">
@@ -43,96 +113,188 @@
           </button>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="container">
+      <div
+        class="jumbotron"
+        style="
+          background-color: cornsilk;
+          margin-top: 15px;
+          padding-bottom: 0px !important;
+        "
+      >
+        <h1 class="display-4" id="pageHeading">Lets book your hotel !</h1>
+        <p class="lead" id="pageDescription">
+          We just need some more information about your stay and we'll get your
+          bookings done in no time.
+        </p>
+      </div>
 
-
-      
-      <h1>Welcome</h1>
-      <p>To travel is to live!</p>
-
-      <div class="container container-fluid card">
+      <div class="container container-fluid card col-md-6">
         <div class="row">
-          <div class="col-md-6">
-            <h2 style="padding: 3%">Enter Booking Details :</h2>
+          <div class="col-md-12">
             <div class="card-body">
+              <p class="lead">Bookings available upto 1 week.</p>
               <form method="POST" name="bookForm" id="bookForm">
-                <div class="content grid">
-                  <div class="form-group">
-                    <label>CheckIn Date</label> <br />
+                <div class="form-group">
+                  <label>CheckIn Date</label> <br />
+                  <input
+                    id="checkinDate"
+                    class="form-control"
+                    type="date"
+                    placeholder="29/20/2021"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>CheckOut Date </label> <br />
+                  <input
+                    id="checkoutDate"
+                    type="date"
+                    class="form-control"
+                    placeholder="29/20/2021"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Number of Adults</label> <br />
+                  <input
+                    id="adultCount"
+                    class="form-control"
+                    type="number"
+                    placeholder="01"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Children </label> <br />
+                  <input
+                    id="childrenCount"
+                    class="form-control"
+                    type="number"
+                    placeholder="01"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Single rooms <b>Price: $ 145</b></label> <br />
+                  <input
+                    id="singleroomsBooked"
+                    class="form-control"
+                    type="number"
+                    placeholder="01"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Double rooms <b>Price: $ 175</b></label> <br />
+                  <input
+                    id="doubleroomsBooked"
+                    class="form-control"
+                    type="number"
+                    placeholder="01"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Suites <b>Price: $ 225</b></label> <br />
+                  <input
+                    id="suitesBooked"
+                    class="form-control"
+                    type="number"
+                    placeholder="01"
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
                     <input
-                      id="checkinDate"
-                      class="form-control"
-                      type="date"
-                      placeholder="29/20/2021"
+                      type="checkbox"
+                      class="custom-control-input"
+                      value="breakfast"
+                      id="breakfast"
                     />
-                  </div>
-                  <div class="form-group">
-                    <label>CheckOut Date </label> <br />
-                    <input
-                      id="checkoutDate"
-                      type="date"
-                      class="form-control"
-                      placeholder="29/20/2021"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Number of Adults</label> <br />
-                    <input
-                      id="adultCount"
-                      class="form-control"
-                      type="number"
-                      placeholder="01"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Children </label> <br />
-                    <input
-                      id="childrenCount"
-                      class="form-control"
-                      type="number"
-                      placeholder="01"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Single rooms </label> <br />
-                    <input
-                      id="singleroomsBooked"
-                      class="form-control"
-                      type="number"
-                      placeholder="01"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Double rooms </label> <br />
-                    <input
-                      id="doubleroomsBooked"
-                      class="form-control"
-                      type="number"
-                      placeholder="01"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label>Suites </label> <br />
-                    <input
-                      id="suitesBooked"
-                      class="form-control"
-                      type="number"
-                      placeholder="01"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-primary" type="submit">
-                      <label>Book</label>
-                      <i class="fas fa-arrow-circle-right"></i>
-                    </button>
+                    <label class="custom-control-label" for="breakfast"
+                      >Daily Continental breakfast
+                      <b> Additional Price: $30</b></label
+                    >
                   </div>
                 </div>
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      value="gym"
+                      id="gym"
+                    />
+                    <label class="custom-control-label" for="gym"
+                      >Access to gym. <b> Additional Price: $40</b></label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      value="pool"
+                      id="pool"
+                    />
+                    <label class="custom-control-label" for="pool"
+                      >Access to swimming pools/jaccuzi
+                      <b> Additional Price: $40</b></label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      value="parking"
+                      id="parking"
+                    />
+                    <label class="custom-control-label" for="parking"
+                      >Parking <b> Additional Price: $30</b></label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      value="meals"
+                      id="meals"
+                    />
+                    <label class="custom-control-label" for="meals"
+                      >All meals included (Breakfast/lunch/dinner)
+                      <b> Additional Price: $80</b></label
+                    >
+                  </div>
+                </div>
+                <br class="form-group">
+                  <p>
+                    Total Reward points :
+                    <span id="rewardPoints"> rewardPoints </span></p></br>
+                    <button class="btn btn-primary" type="submit">
+                      <label>Continue to buy</label>
+                    </button>
+
+                    <button class="btn btn-primary" type="submit" onclick="myFunction()">
+                      <label>Use reward Points</label>
+                    </button>
+                    <script>
+                      function myFunction() {
+                        localStorage.setItem("useRewardPoints", "True")
+                      }
+                      </script>
+                  </p>
+                </div>
               </form>
+              <p class="lead">
+                Note: The prices might be higher on weekends & holidays.
+              </p>
             </div>
           </div>
-          <div class="col-md-6">
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-12">
             <h2 style="padding: 3%; padding-left: 0">Amenities :</h2>
             <div class="form-check">
               <input
@@ -190,7 +352,7 @@
               </label>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <script src="./hotelBooking.js"></script>

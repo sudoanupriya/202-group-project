@@ -9,6 +9,11 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Component;
 
+
+/**
+ *  @author Teja Ganapati Jaddipal - 015957526
+ */
+
 @Configuration
 @Component
 public class DBConfig {
