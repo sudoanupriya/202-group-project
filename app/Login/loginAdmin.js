@@ -7,15 +7,21 @@ if (form) {
 
     const email = form.elements["email"].value;
     const password = form.elements["password"].value;
-
+    var header = {
+      "Content-Type": "application/json",
+      Cookie: document.cookie,
+    };
+    header.Add("Access-Control-Allow-Origin", "*");
+    header.Add("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
+    header.Add(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization, X-Requested-With"
+    );
     var settings = {
       url: "http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/userLogin",
       method: "POST",
       timeout: 0,
-      headers: {
-        "Content-Type": "application/json",
-        Cookie: document.cookie,
-      },
+      headers: header,
       data: JSON.stringify({
         userName: email,
         password: password,
