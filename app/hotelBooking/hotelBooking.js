@@ -65,7 +65,7 @@ if (flag == "True") {
       const breakfast = $("#breakfast").is(":checked") ? 1 : 0;
       //console.log(loggedInUserEmail);
       var settings = {
-        url: "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/createBooking",
+        url: "http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/createBooking",
         method: "POST",
         timeout: 0,
         headers: {
@@ -128,7 +128,7 @@ if (flag == "True") {
       const breakfast = $("#breakfast").is(":checked") ? 1 : 0;
       //console.log(loggedInUserEmail);
       var settings = {
-        url: "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/createBooking",
+        url: "http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/createBooking",
         method: "POST",
         timeout: 0,
         headers: {
