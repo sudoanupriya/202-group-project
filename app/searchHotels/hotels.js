@@ -15,7 +15,7 @@ if (form) {
 
     var settings = {
       url:
-        "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/searchHotels?searchkey=" +
+        "http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/searchHotels?searchkey=" +
         searchQuery,
       method: "GET",
       timeout: 0,
