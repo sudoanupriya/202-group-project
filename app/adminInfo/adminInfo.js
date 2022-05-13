@@ -1,5 +1,5 @@
 var settings = {
-  url: "http://localhost:8090/getAllBookings",
+  url: "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/getAllBookings",
   method: "GET",
   timeout: 0,
   headers: {
@@ -110,7 +110,7 @@ $.ajax(settings).done(function (response) {
 //   //localStorage.removeItem("bookingHistory");
 //   const userId = localStorage.getItem("userId");
 //   var settings = {
-//     url: "http://localhost:8090/getAllUserBookings/" + userId,
+//     url: "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/getAllUserBookings/" + userId,
 //     method: "GET",
 //     timeout: 0,
 //   };
@@ -127,7 +127,7 @@ $.ajax(settings).done(function (response) {
 // function deleteBooking(elem) {
 //   var settings = {
 //     url:
-//       "http://localhost:8090/deleteBooking/" +
+//       "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/deleteBooking/" +
 //       bookingHistory[elem.id.split("-")[1]].bookingId,
 //     method: "DELETE",
 //     timeout: 0,

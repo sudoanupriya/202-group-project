@@ -14,7 +14,9 @@ if (form) {
     // console.log(fname + " type " +user_type);
 
     var settings = {
-      url: "http://localhost:8090/searchHotels?searchkey=" + searchQuery,
+      url:
+        "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/searchHotels?searchkey=" +
+        searchQuery,
       method: "GET",
       timeout: 0,
       headers: {

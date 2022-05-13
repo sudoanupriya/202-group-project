@@ -9,7 +9,7 @@ if (form) {
     const password = form.elements["password"].value;
 
     var settings = {
-      url: "http://localhost:8090/userLogin",
+      url: "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/userLogin",
       method: "POST",
       timeout: 0,
       headers: {

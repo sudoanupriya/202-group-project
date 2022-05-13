@@ -52,7 +52,9 @@ function reloadLocalStorage() {
   //localStorage.removeItem("bookingHistory");
   const userId = localStorage.getItem("userId");
   var settings = {
-    url: "http://localhost:8090/" + userId,
+    url:
+      "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/" +
+      userId,
     method: "GET",
     timeout: 0,
   };
@@ -69,7 +71,7 @@ function reloadLocalStorage() {
 function deleteBooking(elem) {
   var settings = {
     url:
-      "http://localhost:8090/deleteBooking/" +
+      "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/deleteBooking/" +
       bookingHistory[elem.id.split("-")[1]].bookingId,
     method: "DELETE",
     timeout: 0,
@@ -83,7 +85,7 @@ function deleteBooking(elem) {
 function modifyBooking(elem) {
   var settings = {
     url:
-      "http://localhost:8090/deleteBooking/" +
+      "http://http://ec2-18-144-53-161.us-west-1.compute.amazonaws.com:8090/deleteBooking/" +
       bookingHistory[elem.id.split("-")[1]].bookingId,
     method: "DELETE",
     timeout: 0,
